@@ -34,7 +34,7 @@ module.exports = function (config) {
 
     // options for 'karma-benchmark-plotly-reporter'
     benchmarkPlotlyReporter: {
-      username: 'plot.ly user name (required',
+      username: 'plot.ly user name (required)',
       apiKey: 'plot.ly API key (required)'
     }
   })
@@ -75,27 +75,33 @@ See complete working [examples][example] for more details.
 
 ## API
 
+The `benchmarkPlotlyReporter` option container has five settings:
+
 ### `username`
 
-**Required** Plotly cloud user name. Sign up for free at
+**Required!** Plotly cloud user name. Sign up for free at
 [plot.ly](https://plot.ly/).
 
 ### `apiKey`
 
-**Required** Plotly cloud API key. Copy it from
+**Required!** Plotly cloud API key. Copy it from
 [plot.ly/settings/api](https://plot.ly/settings/api).
 
 ### `makeFigure`
 
 Function that takes in the compiled results array and is expected to return an
-`"data"` / "layout" object filled with the plotly options. For the complete list
+`"data"` / `"layout"` object filled with plotly options. For the complete list
 of available data and layout options, go to
 [plot.ly/javascript/reference](https://plot.ly/javascript/reference/)
+
+The compiled results are presented in the same way for the
+`karma-benchmark-json-reporter`. See
+[docs](https://github.com/etpinard/karma-benchmark-json-reporter#formatresults).
 
 Default: see the default `makeFigure` function in `lib/make_figure.js`.
 
 If `makeFigure` returns an array of `"data"` / `"layout"` objects, then multiple
-graphs will be generated. See this [example]() for more.
+graphs will be generated. See this [example][example-02] for more.
 
 ### `cloudFilename`
 
@@ -139,5 +145,6 @@ Default: `null`
 [badge-greenkeeper]: https://badges.greenkeeper.io/etpinard/karma-benchmark-plotly-reporter.svg
 [karma-benchmark]: https://github.com/JamieMason/karma-benchmark
 [example]: https://github.com/etpinard/karma-benchmark-plotly-reporter/tree/master/example
+[example-02]: https://github.com/etpinard/karma-benchmark-plotly-reporter/tree/master/example/02-multiple-graphs
 [example-graph-png]: https://plot.ly/~etpinard/7443.png
 [example-graph-url]: https://plot.ly/~etpinard/7443
