@@ -1,0 +1,43 @@
+{
+  "name": "karma-benchmark-plotly-reporter",
+  "version": "0.1.0",
+  "description": "A reporter for karma-benchmark visualising results as plotly graphs.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard --fix",
+    "test:lint": "snazzy",
+    "test:js": "tap test/test.js",
+    "test:example": "tap --no-timeout test/test_example.js",
+    "test": "npm run test:lint && npm run test:js && npm run test:example",
+    "cover": "nyc npm test",
+    "coveralls": "npm run cover && nyc report --reporter=text-lcov | coveralls"
+  },
+  "keywords": [
+    "karma-plugin",
+    "karma-reporter",
+    "karma-benchmark",
+    "benchmark",
+    "plotly"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etpinard/karma-benchmark-plotly-reporter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/etpinard/karma-benchmark-plotly-reporter/issues"
+  },
+  "author": "Étienne Tétreault-Pinard",
+  "license": "MIT",
+  "homepage": "https://github.com/etpinard/karma-benchmark-plotly-reporter#readme",
+  "devDependencies": {
+    "coveralls": "^2.12.0",
+    "nyc": "^10.1.2",
+    "snazzy": "^6.0.0",
+    "standard": "^9.0.2",
+    "tap": "^10.3.0"
+  },
+  "dependencies": {
+    "karma-benchmark-json-reporter": "^1.0.0",
+    "plotly": "^1.0.6"
+  }
+}
