@@ -4,6 +4,7 @@
   "description": "Example of karma-benchmark-plotly-reporter",
   "main": "bench.js",
   "scripts": {
+    "clean": "rm -f benchmarks.json",
     "start": "karma start karma.conf.js"
   },
   "keywords": [],
