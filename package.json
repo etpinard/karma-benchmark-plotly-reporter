@@ -1,6 +1,6 @@
 {
   "name": "karma-benchmark-plotly-reporter",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A reporter for karma-benchmark visualising results as plotly graphs.",
   "main": "index.js",
   "scripts": {
