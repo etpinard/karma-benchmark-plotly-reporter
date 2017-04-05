@@ -9,17 +9,17 @@ fs.readdir(PATH_TO_EXAMPLE, function (err, dirs) {
   if (err) throw err
 
   dirs.forEach(function (d) {
-    var karmaConf = path.join(PATH_TO_EXAMPLE, d, 'karma.conf.js')
+    var creds = path.join(PATH_TO_EXAMPLE, d, '.credentials.json')
 
-    if (!doesFileExist(karmaConf)) {
+    if (!doesFileExist(creds)) {
       var content = JSON.stringify({
         username: PLOTLY_USERNAME,
         apiKey: PLOTLY_APIKEY
-      }, 2, null)
+      }, null, 2)
 
-      fs.writeFile(karmaConf, content, function (err) {
+      fs.writeFile(creds, content + '\n', function (err) {
         if (err) throw err
-        console.log('wrote', karmaConf)
+        console.log('wrote', creds)
       })
     }
   })
