@@ -20,7 +20,7 @@ var BenchReporter = function (baseReporterDecorator, config) {
     throw new Error('Must provide plotly cloud username and api key!')
   }
 
-  var plotly = Plotly(opts.username, opts.apiKey)
+  var plotly = this._plotly = Plotly(opts.username, opts.apiKey)
 
   var _makeFigure = isFunction(opts.makeFigure)
     ? opts.makeFigure
@@ -61,6 +61,7 @@ var BenchReporter = function (baseReporterDecorator, config) {
 
       if (imageFn !== null) {
         var imageOpts = {}
+        imageOpts.filename = imageFn
         imageOpts.format = path.extname(imageFn).substr(1)
         imageOpts.width = fig.layout.width || 600
         imageOpts.height = fig.layout.height || 700
@@ -84,9 +85,6 @@ var BenchReporter = function (baseReporterDecorator, config) {
     if (pending) next = done
     else done()
   }
-
-  // to mock `plotly` in tests
-  this._plotly = plotly
 }
 
 function coerceCloudFilename (config, opts) {
