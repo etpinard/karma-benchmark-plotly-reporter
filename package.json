@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "standard --fix",
+    "pretest": "node test/pretest.js",
     "test:lint": "snazzy",
     "test:js": "tap test/test.js",
     "test:example": "tap --no-timeout test/test_example.js",
