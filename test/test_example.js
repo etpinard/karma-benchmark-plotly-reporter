@@ -5,6 +5,7 @@ var sizeOf = require('image-size')
 var tap = require('tap')
 
 var PATH_TO_EXAMPLE = path.join(__dirname, '..', 'example')
+var CI = !!process.env.CI
 
 function run (dirName, cb) {
   var cmd = 'npm run clean && npm start -- --browsers Firefox'
@@ -48,7 +49,7 @@ function assertMsg (t, msg, requiredContent) {
   t.ok(ok, lines)
 }
 
-tap.test('should return correct image - simple case', function (t) {
+tap.test('should return correct image - simple case', { skip: CI }, function (t) {
   run('01-simple', function (cwd, msg) {
     t.same(getSize(cwd, 'one.png'), [600, 700])
 
@@ -61,7 +62,7 @@ tap.test('should return correct image - simple case', function (t) {
   })
 })
 
-tap.test('should return correct images - multiple output files case', function (t) {
+tap.test('should return correct images - multiple output files case', { skip: CI }, function (t) {
   run('02-multiple-graphs', function (cwd, msg) {
     t.same(getSize(cwd, 'results-fill.png'), [600, 700])
     t.same(getSize(cwd, 'results-iteration.png'), [600, 700])
@@ -77,7 +78,7 @@ tap.test('should return correct images - multiple output files case', function (
   })
 })
 
-tap.test('should return correct image - custom graph case', function (t) {
+tap.test('should return correct image - custom graph case', { skip: CI }, function (t) {
   run('03-custom-graph', function (cwd, msg) {
     t.same(getSize(cwd, 'benchmarks.svg'), [1000, 800])
 
@@ -89,7 +90,7 @@ tap.test('should return correct image - custom graph case', function (t) {
   })
 })
 
-tap.test('should return correct JSON - with json reporter case', function (t) {
+tap.test('should return correct JSON - with json reporter case', { skip: CI }, function (t) {
   run('04-with-json-reporter', function (cwd, msg) {
     var r = read(cwd, 'benchmarks.json')
 
