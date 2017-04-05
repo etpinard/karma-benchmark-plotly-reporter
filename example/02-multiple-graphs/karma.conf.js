@@ -1,5 +1,5 @@
 var credentials = require('./.credentials.json')
-var makeFigureDflt = require('karma-benchmark-plotly-reporter/lib/make_figure')
+var makeFigureDflt = require('karma-benchmark-plotly-reporter/make_figure')
 
 module.exports = function (config) {
   config.set({
