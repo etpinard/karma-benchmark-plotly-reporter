@@ -35,7 +35,7 @@
     "image-size": "^0.5.1",
     "nyc": "^10.1.2",
     "snazzy": "^6.0.0",
-    "standard": "^9.0.2",
+    "standard": "^10.0.0",
     "tap": "^10.3.0"
   },
   "dependencies": {
