@@ -98,7 +98,7 @@ The compiled results are presented in the same way for the
 `karma-benchmark-json-reporter`. See
 [docs](https://github.com/etpinard/karma-benchmark-json-reporter#formatresults).
 
-Default: see the default `makeFigure` function in `lib/make_figure.js`.
+Default: see the default `makeFigure` function in `./make_figure.js`.
 
 If `makeFigure` returns an array of `"data"` / `"layout"` objects, then multiple
 graphs will be generated. See this [example][example-02] for more.

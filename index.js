@@ -4,7 +4,7 @@ var Plotly = require('plotly')
 
 var fillResultSet = require('karma-benchmark-json-reporter/lib/fill_result_set')
 var compileResults = require('karma-benchmark-json-reporter/lib/compile_results')
-var makeFigure = require('./lib/make_figure')
+var makeFigure = require('./make_figure')
 
 var BenchReporter = function (baseReporterDecorator, config) {
   baseReporterDecorator(this)
