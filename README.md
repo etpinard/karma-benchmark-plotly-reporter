@@ -92,13 +92,14 @@ The `benchmarkPlotlyReporter` option container has five settings:
 Function that takes in the compiled results array and is expected to return an
 `"data"` / `"layout"` object filled with plotly options. For the complete list
 of available data and layout options, go to
-[plot.ly/javascript/reference](https://plot.ly/javascript/reference/)
+[plot.ly/javascript/reference](https://plot.ly/javascript/reference/).
 
 The compiled results are presented in the exact same way as for the
 `karma-benchmark-json-reporter`. See
 [docs](https://github.com/etpinard/karma-benchmark-json-reporter#formatresults).
 
-Default: see the default `makeFigure` function in `./make_figure.js`.
+Default: see the default `makeFigure` function in 
+[`./make_figure.js`](https://github.com/etpinard/karma-benchmark-plotly-reporter/blob/master/make_figure.js).
 
 If `makeFigure` returns an array of `"data"` / `"layout"` objects, then multiple
 graphs will be generated. See this [example][example-02] for more.
