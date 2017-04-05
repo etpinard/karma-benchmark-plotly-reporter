@@ -30,7 +30,7 @@ module.exports = function (config) {
     reporters: ['benchmark-plotly'],
 
     files: ['bench.js'],
-    browsers: ['Chrome'],
+    browsers: ['Firefox'],
 
     // options for 'karma-benchmark-plotly-reporter'
     benchmarkPlotlyReporter: {
@@ -94,7 +94,7 @@ Function that takes in the compiled results array and is expected to return an
 of available data and layout options, go to
 [plot.ly/javascript/reference](https://plot.ly/javascript/reference/)
 
-The compiled results are presented in the same way for the
+The compiled results are presented in the exact same way as for the
 `karma-benchmark-json-reporter`. See
 [docs](https://github.com/etpinard/karma-benchmark-json-reporter#formatresults).
 
