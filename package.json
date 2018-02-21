@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "standard --fix",
     "pretest": "node test/pretest.js",
-    "test:lint": "snazzy",
+    "test:lint": "standard | snazzy",
     "test:js": "tap test/test.js",
     "test:example": "tap --no-timeout test/test_example.js",
     "test": "npm run test:lint && npm run test:js && npm run test:example",
@@ -34,7 +34,7 @@
     "coveralls": "^3.0.0",
     "image-size": "^0.6.0",
     "nyc": "^11.0.2",
-    "snazzy": "^6.0.0",
+    "snazzy": "^7.0.0",
     "standard": "^11.0.0",
     "tap": "^11.0.0"
   },
