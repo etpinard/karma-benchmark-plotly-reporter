@@ -18,11 +18,9 @@ function run (dirName, cb) {
       exec(cmd, { cwd: cwd }, function (err, msg) {
         if (err) throw err
         cb(cwd, msg)
-      })
-      .stdout.pipe(process.stdout)
+      }).stdout.pipe(process.stdout)
     }, 2000)
-  })
-  .stdout.pipe(process.stdout)
+  }).stdout.pipe(process.stdout)
 }
 
 function getSize (cwd, fileName) {
