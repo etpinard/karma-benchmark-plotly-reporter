@@ -31,7 +31,7 @@
   "license": "MIT",
   "homepage": "https://github.com/etpinard/karma-benchmark-plotly-reporter#readme",
   "devDependencies": {
-    "coveralls": "^3.0.0",
+    "coveralls": "3.0.2",
     "image-size": "^0.6.0",
     "nyc": "^11.0.2",
     "snazzy": "^8.0.0",
